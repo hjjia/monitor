@@ -1,0 +1,71 @@
+@import './common/styles/minix.less';
+@import './common/styles/colors.less';
+
+html {
+    height: 100%;
+
+    body {
+        height: 100%;
+        font-size: @defaultFontSize;
+        background-color: @defaultBodyBg;
+        color: @defaultFontColor;
+
+        #root {
+            height: 100%;
+
+            .common-structure-width {
+                width: @pageWidth;
+                min-width: @pageMinWidth;
+                max-width: @pageMaxWidth;
+            }
+
+            .common-content {
+                padding-top: @headerHeight + @partSpace;
+                
+                .common-content-main {
+                    .flex(flex-start, flex-start);
+                    margin-left: auto;
+                    margin-right: auto;
+
+                    >.app-list-page-wrap + .silder-bar-container {
+                        display: none;
+                    }
+
+                    .content-main {
+                        background-color: @contentMainBg;
+                        flex-grow: 1;
+                        min-height: @contentMainHeight;
+
+                        .title {
+                            font-size: @orderTitleFontSize;
+                            border-bottom: 1px solid @defaultBorderColor;
+                            line-height: 2;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+
+            .app {
+                height: 100%;
+            }
+
+            .left-border {
+                .left-border(@headerBorderColor);
+            }
+
+            .m5 {
+                margin: 5px;
+            }
+        }
+
+        .relative {
+            position: relative;
+        }
+
+        .mt20 {
+            margin-top: 20px;
+        }
+
+    }
+}

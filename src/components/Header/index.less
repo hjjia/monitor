@@ -1,0 +1,46 @@
+@import '../../common/styles/minix.less';
+@import '../../common//styles/colors.less';
+
+.header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: @headerHeight;
+    background-color: @headerBgColor;
+    color: @headerFontColor;
+    .flex();
+    z-index: @headerIndex;
+
+    .header-content {
+        .flex(space-between, center);
+
+        .header-content-left {
+            .flex();
+
+            .header-logo {
+                .flex();
+
+                &:after {
+                    position: absolute;
+                }
+                .logo-wrapper {
+                    margin-right: @smallSpace;
+                    width: @headerLogoSize;
+                    height: @headerLogoSize;
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+                
+            }
+
+            a {
+                color: @headerFontColor;
+            }
+        }
+    }
+}

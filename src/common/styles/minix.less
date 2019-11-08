@@ -1,0 +1,62 @@
+@import './zIndex.less';
+
+// 默认
+@defaultBodyBg: #f1f4f6;;
+// 默认字体大小
+@defaultFontSize: 12px;
+@defaultTitleSIze: 16px;
+
+// 间距
+@smallSpace: 10px;
+@partSpace: 15px; // sider和main之间的距离
+@contentSpace: 20px; // 页面中内容之间的距离
+@bigSpace: 30px; 
+@smallFontSpace: 5px;
+@betweenIconAndFont: 5px;
+
+// 整体页面变量
+@pageMinWidth: 100%;
+@pageMaxWidth: 100%;
+@pageWidth: 100%;
+
+// 头部
+@headerHeight: 50px;
+@headerLogoSize: 30px;
+
+// 侧边栏
+@silderWidth: 180px;
+@silderMinWidth:180px;
+@sliderMinHeight: 500px;
+
+// 主内容区
+@contentMainHeight: 500px;
+
+// 订单页面
+@orderPageCommonSpace: @bigSpace; // 内容四周留白
+@orderPartSpace: @contentSpace;
+@orderTitleFontSize: @defaultTitleSIze;
+
+// applist 页面
+@appListPartSpace: @contentSpace;
+
+
+.flex(@justifyItem: center, @alignItem: center) {
+    display: flex;
+    justify-content: @justifyItem;
+    align-items: @alignItem;
+}
+
+.left-border(@borderColor: inherit) {
+    font-size: 18px;
+    margin-left: @smallSpace;
+    margin-right: @smallSpace;
+    color: @borderColor;
+    margin-top: -3px;
+}
+
+.title(@fontSize: @defaultTitleSIze, @color: inherit, @lineHeight: 2, @fontWeight: bold) {
+    font-size: @fontSize;
+    color: @color;
+    line-height: @lineHeight;
+    font-weight: @fontWeight;
+}

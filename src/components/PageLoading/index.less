@@ -1,0 +1,31 @@
+@import '../../common/styles/minix.less';
+@import '../../common/styles/colors.less';
+@iconFontSize: 40px;
+@iconFontColor: white;
+.page-loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    .flex();
+    z-index: @pageLoadingIndex;
+    
+    .page-loading-mask {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0, .2);
+    }
+
+    .page-loading-wrap {
+        .flex();
+
+        .page-loading {
+            font-size: @iconFontSize;
+            color: @iconFontColor;
+        }
+    }
+}

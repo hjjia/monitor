@@ -1,0 +1,70 @@
+@import '../../common/styles/minix.less';
+@import '../../common/styles/colors.less';
+
+@pageSpace: 50px;
+.app-list-page-wrap {
+    width: 100%;
+    
+    .title {
+        .title();
+        margin-top: @appListPartSpace - 10px;
+        margin-bottom: @appListPartSpace;
+        >.anticon {
+            margin-right: @betweenIconAndFont;
+        }
+    }
+
+    .app-list-content {
+        padding: @pageSpace;
+        background-color: @appListContentBgColor;
+
+        .ant-col {
+            padding: @contentSpace !important;
+        }
+
+        .app-list-item {
+            
+            > .ant-card {
+                transition: all .2s linear;
+                box-shadow: 0 0 10px rgba(0,0,0,.1);
+                position: relative;
+                border-radius: 10px;
+                overflow: hidden;
+
+                &:hover {
+                    box-shadow: 0 0 30px rgba(0,0,0,.1);
+                    transform: translateY(-5px);
+                }
+
+                &:before {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    content: "";
+                    display: inline-block;
+                    height: 100%;
+                    background-color: @appListItemBorderDefaultColor;
+                    width: 4px;
+                }
+
+                .item-footer {
+                    .flex(space-between, center);
+                    margin-top: @partSpace;
+                }
+            }
+
+            &.item-active{
+                > .ant-card:before {
+                background-color: @appListItemBorderActiveColor;
+                }
+            }
+
+            &.item-disabled{
+                > .ant-card:before {
+                    background-color: @appListItemBorderDisabledColor;
+                }
+            }
+        }
+    }
+    
+}
