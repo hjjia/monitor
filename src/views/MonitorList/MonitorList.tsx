@@ -153,14 +153,14 @@ class MonitorList extends React.Component<MonitorListProps, MonitorListState> {
 
     expandedRowRender = (record: any) => {
         const data = [{"tcpt":0,"srt":2.7150000678375363,"pdt":1.8449999624863267,"dnst":0,"duration":7.314999937079847,"name":"http://localhost:3000/static/js/bundle.js","initiatorType":"script","encodedBodySize":6404,"decodedBodySize":31951,"transferSize":6719,"startTime":52.795000025071204},{"tcpt":0,"srt":11.564999935217202,"pdt":68.46500001847744,"dnst":0,"duration":87.30500005185604,"name":"http://localhost:3000/static/js/1.chunk.js","initiatorType":"script","encodedBodySize":943482,"decodedBodySize":4579921,"transferSize":181,"startTime":53.00999991595745},{"tcpt":0,"srt":2.3999999975785613,"pdt":1.385000068694353,"dnst":0,"duration":22.96500001102686,"name":"http://localhost:3000/static/js/main.chunk.js","initiatorType":"script","encodedBodySize":10553,"decodedBodySize":59131,"transferSize":10868,"startTime":53.27999999281019},{"tcpt":0,"srt":1.069999998435378,"pdt":0.5900000687688589,"dnst":0,"duration":40.35000002477318,"name":"http://localhost:3000/main.32f48b048070f623d288.hot-update.js","initiatorType":"script","encodedBodySize":0,"decodedBodySize":0,"transferSize":179,"startTime":53.50999999791384},{"tcpt":0,"srt":1.3649999164044857,"pdt":0.5499999970197678,"dnst":0,"duration":42.394999996759,"name":"http://localhost:3000/analytics.js","initiatorType":"script","encodedBodySize":0,"decodedBodySize":0,"transferSize":243,"startTime":53.74499992467463}];
-        return record.entries ? (
-            <Table 
-            rowKey={(record: any): string => record.name}
-                columns={columnsRes}
-                dataSource={record.entries} 
-                pagination={false}
-            /> 
-        ): undefined;
+        // return record.entries ? (
+        //     <Table 
+        //     rowKey={(record: any): string => record.name}
+        //         columns={columnsRes}
+        //         dataSource={record.entries} 
+        //         pagination={false}
+        //     /> 
+        // ): undefined;
         return <Table 
         rowKey={(record: any): string => record.name}
         columns={columnsRes}

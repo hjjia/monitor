@@ -47,9 +47,9 @@ axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded
 if (process.env.NODE_ENV === 'production') {
  
 } else {
-  axios.defaults.baseURL = 'http://localhost:8002/'; // zx
+  axios.defaults.baseURL = 'http://192.168.80.180:8002/'; // zx
 }
-axios.defaults.baseURL = 'https://www.static.com'
+axios.defaults.baseURL = 'https://www.yuzhix.com'
 
 export function toParams(query: any) {
   if (!query) {
